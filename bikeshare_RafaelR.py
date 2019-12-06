@@ -41,12 +41,12 @@ def get_filters():
             break 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    WEEKDAY_DATA = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
+    WEEKDAY = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
     while True:
         day = str(input('Enter the name of the day of week to filter by, or \'all\' to apply no day filter: ')).lower()
         
-        if day not in WEEKDAY_DATA:
+        if day not in WEEKDAY:
             print('{} is not a valid day of week. Please choose any day, or \'all\' to apply no day filter'.format(weekday))
             continue 
         else:

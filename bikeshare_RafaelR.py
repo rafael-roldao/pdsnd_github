@@ -28,12 +28,12 @@ def filters():
             break 
 
     # get user input for month (all, january, february, ... , june)
-    MONTH_DATA = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
+    1H_MONTH_DATA = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
 
     while True:
         month = str(input('Enter the name of the month to filter by (january to june), or \'all\' to apply no month filter: ')).lower()
         
-        if month not in MONTH_DATA:
+        if month not in 1H_MONTH_DATA:
             print('{} is not a valid month. Please choose any month from january to june, or \'all\' to apply no month filter'.format(month))
             continue 
         else:

@@ -1,15 +1,15 @@
 ### Date created
-Include the date you created this project and README file.
+The project was created on December 06, 2019.
 
 ### Project Title
-Replace the Project Title
+Project Rafael's Bikeshare
 
 ### Description
-Describe what your project is about and what it does
+This project intends to analyze some bike sharing stats in Chicago, New York City and Washington
 
 ### Files used
-Include the files used
+For this project, we are using 'chicago.csv', 'new_york_city.csv' and 'washington.csv'
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project was inspired in [udacity](https://github.com/udacity/pdsnd_github).
 

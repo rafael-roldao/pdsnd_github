@@ -6,7 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-def get_filters():
+def filters():
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -28,12 +28,12 @@ def get_filters():
             break 
 
     # get user input for month (all, january, february, ... , june)
-    MONTH_DATA = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
+    1H_MONTH_DATA = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
 
     while True:
         month = str(input('Enter the name of the month to filter by (january to june), or \'all\' to apply no month filter: ')).lower()
         
-        if month not in MONTH_DATA:
+        if month not in 1H_MONTH_DATA:
             print('{} is not a valid month. Please choose any month from january to june, or \'all\' to apply no month filter'.format(month))
             continue 
         else:
@@ -41,12 +41,12 @@ def get_filters():
             break 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    WEEKDAY_DATA = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
+    WEEKDAY = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
     while True:
         day = str(input('Enter the name of the day of week to filter by, or \'all\' to apply no day filter: ')).lower()
         
-        if day not in WEEKDAY_DATA:
+        if day not in WEEKDAY:
             print('{} is not a valid day of week. Please choose any day, or \'all\' to apply no day filter'.format(weekday))
             continue 
         else:
@@ -195,7 +195,7 @@ def user_stats(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = filters()
         df = load_data(city, month, day)
 
         time_stats(df)
